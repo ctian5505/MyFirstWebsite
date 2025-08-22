@@ -1,0 +1,40 @@
+#products-container {
+  display: flex;
+}
+
+.product {
+  border: 1px solid black;
+  width: 120px;
+  height: 150px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.product-image img {
+  max-width: 100%;
+}
+
+.product-info {
+  text-align: center;
+  font-size: 15px;
+}
+
+.cart-item {
+  display: flex;
+  height: 30px;
+  max-width: 500px;
+  border: 1px solid black;
+}
+
+.cart-item img {
+  height: 100%;
+}
+
+.cart-item p {
+  color: rebeccapurple;
+  margin: auto;
+}
+
+li {
+  list-style-type: none;
+}
