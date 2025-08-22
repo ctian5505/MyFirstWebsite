@@ -39,6 +39,8 @@ function updateCartDisplay() {
           <button class="removeBtn">Remove</button>
         </div>
   `;
+    const removeBtn = li.querySelector(".removeBtn");
+    removeBtn.addEventListener("click", () => removeFromCart(index));
 
     cartList.appendChild(li);
   });
@@ -46,5 +48,7 @@ function updateCartDisplay() {
   cartTotal.innerHTML = `Total: P${total}`;
 }
 
-const removeFromCart = document.querySelectorAll(".removeBtn");
-removeFromCart.addEventListener("click", console.log("remove"));
+function removeFromCart(index) {
+  cart.splice(index, 1);
+  updateCartDisplay();
+}
