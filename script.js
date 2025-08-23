@@ -7,7 +7,6 @@ products.forEach((product) => {
   productDiv.dataset.name = product.name;
   productDiv.dataset.price = product.price;
   productDiv.dataset.image = product.image;
-  productDiv.setAttribute("data-name", product.name);
 
   productDiv.innerHTML = `
         <div class="product-image">
@@ -18,7 +17,7 @@ products.forEach((product) => {
         </div>
         <div class="product-info">
           <div class="product-name">${product.name}</div>
-          <div class="product-price">${product.price}</div>
+          <div class="product-price">₱ ${product.price}</div>
         </div>
   `;
 
@@ -62,7 +61,7 @@ function updateCartDisplay() {
             src="${item.image}"
           />
           <p>${item.name}</p>
-          <p>${item.price}</p>
+          <p>₱ ${item.price}</p>
           <button class="removeBtn">Remove</button>
         </div>
   `;
