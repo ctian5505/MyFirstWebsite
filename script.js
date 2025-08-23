@@ -1,3 +1,30 @@
+// Displaying the product+
+const container = document.getElementById("products-container");
+
+products.forEach((product) => {
+  const productDiv = document.createElement("div");
+  productDiv.classList.add("product");
+  productDiv.dataset.name = product.name;
+  productDiv.dataset.price = product.price;
+  productDiv.dataset.image = product.image;
+  productDiv.setAttribute("data-name", product.name);
+
+  productDiv.innerHTML = `
+        <div class="product-image">
+          <img
+            src="${product.image}"
+            alt="${product.name}"
+          />
+        </div>
+        <div class="product-info">
+          <div class="product-name">${product.name}</div>
+          <div class="product-price">${product.price}</div>
+        </div>
+  `;
+
+  container.appendChild(productDiv);
+});
+//
 let cart = [];
 
 // Make each tile working
