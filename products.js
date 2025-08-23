@@ -1,6 +1,6 @@
 products = [
   {
-    name: "Dark Artistry Cape Dark Artistry Cape Dark Artistry Cape",
+    name: "Dark Artistry Cape",
     price: "5830",
     image:
       "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KW1Zwwo4NUX4oFJZEHLbXK9QlSPcU7pw1SR0nCCOCsxcTsUk9gLBdDpKPqLwZy2MzJYylL_8ikjb-IlufxDLbekm5dpscj2b-Zp9yn0VC2rxFuNWH7dYOSJgY4aAuG_1W8lO_og8O5u5jKzHB9-n51ZVJK5r8",
