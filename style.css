@@ -4,23 +4,46 @@ body {
 }
 
 header {
-  background: black;
   height: 50px;
   margin-bottom: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 #header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 95%;
+  background-color: #1a1b1b;
 }
 
 #logo-img {
   height: 50px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+#select-account-name,
+#select-hero-name,
+#search-bar {
+  width: 200px;
+  cursor: pointer;
+  text-align: center;
+  height: 25px;
+  padding: 0;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: #1a1b1b;
+  color: white;
 }
 
 #cart-icon img {
-  height: 50px;
+  height: 40px;
+  cursor: pointer;
 }
 #products-container {
   display: grid;
@@ -29,6 +52,7 @@ header {
     minmax(150px, 1fr)
   ); /* 👈 Keeps items same size */
   gap: 0.5rem;
+  margin-top: 70px;
 }
 
 .product {
