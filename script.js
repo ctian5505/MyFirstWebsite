@@ -25,6 +25,7 @@ products.forEach((product) => {
 });
 //
 let cart = [];
+window.addEventListener("load", loadCart);
 
 // Make each tile working
 document.querySelectorAll(".product-image").forEach(function (click) {
@@ -40,7 +41,7 @@ document.querySelectorAll(".product-image").forEach(function (click) {
 
 function addToCart(name, price, image) {
   cart.push({ name, price, image });
-  console.log(cart);
+  saveCart();
   updateCartDisplay();
 }
 
@@ -60,8 +61,7 @@ function updateCartDisplay() {
           <img
             src="${item.image}"
           />
-          <p>${item.name}</p>
-          <p>₱ ${item.price}</p>
+          <p>${item.name} - ₱ ${item.price}</p>
           <button class="removeBtn">Remove</button>
         </div>
   `;
@@ -76,5 +76,18 @@ function updateCartDisplay() {
 
 function removeFromCart(index) {
   cart.splice(index, 1);
+  saveCart();
   updateCartDisplay();
+}
+
+function saveCart() {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function loadCart() {
+  const storedCart = localStorage.getItem("cart");
+  if (storedCart) {
+    cart = JSON.parse(storedCart);
+    updateCartDisplay(); // show saved cart immediately
+  }
 }
