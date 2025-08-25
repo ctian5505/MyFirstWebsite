@@ -3,6 +3,25 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+header {
+  background: black;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo-img {
+  height: 50px;
+}
+
+#cart-icon img {
+  height: 50px;
+}
 #products-container {
   display: grid;
   grid-template-columns: repeat(
